@@ -29,7 +29,7 @@ const NavBar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="border rounded-lg p-3"
+              className="border-2 rounded-lg p-3"
             >
               {link.label}
             </Link>
