@@ -1,3 +1,9 @@
+import NavBar from "./NavBar";
+
 export default function Home() {
-  return <div>Elim Web Page</div>;
+  return (
+    <>
+      <div>Elim Web Page</div>;
+    </>
+  );
 }
