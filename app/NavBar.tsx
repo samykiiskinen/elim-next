@@ -15,12 +15,12 @@ const NavBar = () => {
   ];
   return (
     <>
-      <nav className="flex space-x-4 border-b mb-5 px-5 h-auto items-center ">
+      <nav className="flex space-x-4 mb-5 px-5 h-auto items-center ">
         <Link href="/">
-          <div className="w-full max-w-24 min-w-24 mx-auto m-1">
+          <div className="w-full max-w-32 min-w-32 mx-auto m-1">
             <Image
               className="rounded-full w-full h-auto p-1 hover:ease-in-out"
-              src="/Logo4.bmp"
+              src="/Logo1.bmp"
               alt="Elim logo"
               width={60}
               height={60}
@@ -35,7 +35,7 @@ const NavBar = () => {
               href={link.href}
               className={`${
                 link.href === currentPath
-                  ? "bg-slate-300 text-black border-slate-100 border-2 rounded-lg p-3"
+                  ? "text-black border-2 rounded-lg p-3 bg-zinc-200"
                   : "border-2 rounded-lg p-3"
               }`}
             >

@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 export default function Home() {
   return (
     <>
-      <h1>VÄLKOMMEN TILL PINGSTKYRKAN ELIM!</h1>
+      <h1>PINGSTKYRKAN ELIM I TRELLEBORG</h1>
     </>
   );
 }
