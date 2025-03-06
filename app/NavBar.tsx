@@ -1,8 +1,12 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
+  const currentPath = usePathname();
+
   const links = [
     { label: "PROGRAM", href: "/program" },
     { label: "OM OSS", href: "/about" },
@@ -29,7 +33,11 @@ const NavBar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="border-2 rounded-lg p-3"
+              className={`${
+                link.href === currentPath
+                  ? "bg-slate-300 text-black border-slate-100 border-2 rounded-lg p-3"
+                  : "border-2 rounded-lg p-3"
+              }`}
             >
               {link.label}
             </Link>
