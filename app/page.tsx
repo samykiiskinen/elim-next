@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 export default function Home() {
   return (
     <>
-      <div>Elim Web Page</div>;
+      <h1>VÄLKOMMEN TILL PINGSTKYRKAN ELIM!</h1>
     </>
   );
 }

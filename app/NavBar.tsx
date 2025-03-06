@@ -6,7 +6,7 @@ const NavBar = () => {
   const links = [
     { label: "PROGRAM", href: "/program" },
     { label: "OM OSS", href: "/about" },
-    { label: "PROJEKT", href: "/projects" },
+    { label: "BISTÅND", href: "/aid" },
     { label: "SÅNGER", href: "/songs" },
   ];
   return (
