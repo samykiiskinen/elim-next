@@ -17,7 +17,7 @@ const NavBar = () => {
     <>
       <nav className="flex space-x-4 px-2 py-2 h-auto items-center ">
         <Link href="/">
-          <div className="w-full max-w-32 min-w-32 mx-auto mt-1">
+          <div className="w-full max-w-24 min-w-16 mx-auto mt-1">
             <Image
               className="rounded-full w-full h-auto hover:ease-in-out"
               src="/Logo1.bmp"
@@ -28,7 +28,7 @@ const NavBar = () => {
             ></Image>
           </div>
         </Link>
-        <ul className="flex space-x-4 text-2xl font-bold">
+        <ul className="flex space-x-4 text-lg font-bold">
           {links.map((link) => (
             <Link
               key={link.href}

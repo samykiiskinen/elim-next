@@ -10,6 +10,7 @@ import { createSongSchema } from "@/app/validationSchemas";
 import { z } from "zod";
 import ErrorMessage from "@/app/components/ErrorMessage";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 type SongForm = z.infer<typeof createSongSchema>;
 
@@ -39,30 +40,37 @@ const NewSongPage = () => {
   });
 
   return (
-    <div className="max-w-md">
-      {error && (
-        <Callout.Root color="red" className="mb-2 text-2xl">
-          <Callout.Text>{error}</Callout.Text>
-        </Callout.Root>
-      )}
+    <>
+      <div className="mb-2">
+        <Button>
+          <Link href="/songs">{`<<`}</Link>
+        </Button>
+      </div>
+      <div className="max-w-md">
+        {error && (
+          <Callout.Root color="red" className="mb-2 text-2xl">
+            <Callout.Text>{error}</Callout.Text>
+          </Callout.Root>
+        )}
 
-      <form className="space-y-2" onSubmit={onSubmit}>
-        <TextField.Root
-          placeholder="Titel"
-          {...register("title")}
-        ></TextField.Root>
-        <ErrorMessage>{errors.title?.message}</ErrorMessage>
-        <Controller
-          name="text"
-          control={control}
-          render={({ field }) => <SimpleMDE placeholder="Text" {...field} />}
-        />
-        <ErrorMessage>{errors.text?.message}</ErrorMessage>
-        <div className="mt-2">
-          <Button>LÄGG TILL</Button>
-        </div>
-      </form>
-    </div>
+        <form className="space-y-2" onSubmit={onSubmit}>
+          <TextField.Root
+            placeholder="Titel"
+            {...register("title")}
+          ></TextField.Root>
+          <ErrorMessage>{errors.title?.message}</ErrorMessage>
+          <Controller
+            name="text"
+            control={control}
+            render={({ field }) => <SimpleMDE placeholder="Text" {...field} />}
+          />
+          <ErrorMessage>{errors.text?.message}</ErrorMessage>
+          <div className="mt-2">
+            <Button>LÄGG TILL</Button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 
