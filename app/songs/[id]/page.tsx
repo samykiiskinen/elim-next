@@ -1,6 +1,7 @@
-import React from "react";
 import { prisma } from "@/prisma/client";
 import { notFound } from "next/navigation";
+import { Card, Heading } from "@radix-ui/themes";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
   params: { id: string };
@@ -15,8 +16,10 @@ const SongDetailPage = async ({ params }: Props) => {
 
   return (
     <div>
-      <p>{song.title}</p>
-      <p>{song.text}</p>
+      <Heading>{song.title}</Heading>
+      <Card className="w-xl mt-2 prose">
+        <ReactMarkdown>{song.text}</ReactMarkdown>
+      </Card>
     </div>
   );
 };
