@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Table } from "@radix-ui/themes";
-import Link from "next/link";
 import { prisma } from "@/prisma/client";
+import Link from "next/link";
 
 const SongsPage = async () => {
   const songs = await prisma.song.findMany();
@@ -22,7 +22,9 @@ const SongsPage = async () => {
         <Table.Body>
           {songs.map((song) => (
             <Table.Row key={song.id}>
-              <Table.Cell>{song.title}</Table.Cell>
+              <Table.Cell>
+                <Link href={`/songs/${song.id}`}>{song.title}</Link>
+              </Table.Cell>
               <Table.Cell>{song.text}</Table.Cell>
             </Table.Row>
           ))}
