@@ -18,7 +18,7 @@ const NavBar = () => {
         <Image
           width="100"
           height="100"
-          src="/Logo1.bmp"
+          src="/Logo2.bmp"
           alt="Elim logotype"
           className="rounded-full"
           priority
