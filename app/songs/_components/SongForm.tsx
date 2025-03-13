@@ -32,9 +32,10 @@ const SongForm = ({ song }: { song?: Song }) => {
   const [error, setError] = useState("");
   const onSubmit = handleSubmit(async (data) => {
     try {
-      if (song) await axios.patch("/api/songs" + song.id, data);
+      if (song) await axios.patch("/api/songs/" + song.id, data);
       else await axios.post("/api/songs", data);
       router.push("/songs");
+      router.refresh();
     } catch {
       setError("Unexpected error occurred");
     }

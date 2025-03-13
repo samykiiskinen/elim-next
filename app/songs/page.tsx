@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { prisma } from "@/prisma/client";
 import { RiAddFill, RiPagesLine } from "react-icons/ri";
-import DeleteSongButton from "../components/DeleteSongButton";
+import DeleteSongButton from "./[id]/DeleteSongButton";
 import EditSongButton from "./[id]/EditSongButton";
 
 const SongsPage = async () => {
@@ -22,7 +22,7 @@ const SongsPage = async () => {
           <Table.Header>
             <Table.Row className="text-lg">
               <Table.ColumnHeaderCell className="w-1/2">
-                TITEL
+                SÅNGTITEL
               </Table.ColumnHeaderCell>
               <Table.ColumnHeaderCell className="w-1/4">
                 TONART
