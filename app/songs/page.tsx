@@ -3,8 +3,8 @@ import Link from "next/link";
 import React from "react";
 import { prisma } from "@/prisma/client";
 import { RiAddFill, RiPagesLine } from "react-icons/ri";
-import { GoPencil } from "react-icons/go";
 import DeleteSongButton from "../components/DeleteSongButton";
+import EditSongButton from "./[id]/EditSongButton";
 
 const SongsPage = async () => {
   const songs = await prisma.song.findMany();
@@ -59,11 +59,7 @@ const SongsPage = async () => {
                   </Link>
                 </Table.Cell>
                 <Table.Cell>
-                  <Link href={`/songs/${song.id}/edit`}>
-                    <Button color="gray" variant="surface">
-                      <GoPencil size={20} />
-                    </Button>
-                  </Link>
+                  <EditSongButton songId={song.id}></EditSongButton>
                 </Table.Cell>
                 <Table.Cell>
                   <DeleteSongButton id={song.id}></DeleteSongButton>

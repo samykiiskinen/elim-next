@@ -1,10 +1,10 @@
 import { prisma } from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-import { createSongSchema } from "../../validationSchemas";
+import { songSchema } from "../../validationSchemas";
 
 export async function POST(request: NextRequest) {
     const body = await request.json()
-    const validation = createSongSchema.safeParse(body)
+    const validation = songSchema.safeParse(body)
     if (!validation.success)
         return NextResponse.json(validation.error.errors, {status: 400})
     const newSong = await prisma.song.create({
