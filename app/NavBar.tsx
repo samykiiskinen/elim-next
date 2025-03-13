@@ -13,7 +13,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex gap-4 mb-5 h-auto items-center m-2">
+    <nav className="flex gap-4 mb-5 h-auto items-center m-2 p-2">
       <Link href="/">
         <Image
           width="100"
