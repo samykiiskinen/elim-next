@@ -42,7 +42,9 @@ const SongsPage = async () => {
                   </div>
                 </Table.Cell>
                 <Table.Cell>
-                  <div className="flex items-center h-full text-md"></div>
+                  <div className="flex items-center h-full text-md">
+                    {song.songKey.toLocaleUpperCase()}
+                  </div>
                 </Table.Cell>
                 <Table.Cell>
                   <Button color="jade" variant="soft">

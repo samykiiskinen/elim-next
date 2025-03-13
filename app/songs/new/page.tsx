@@ -56,6 +56,11 @@ const NewSongPage = () => {
           {...register("title")}
         ></TextField.Root>
         <ErrorMessage>{errors.title?.message}</ErrorMessage>
+        <TextField.Root
+          placeholder="Tonart"
+          {...register("songKey")}
+        ></TextField.Root>
+        <ErrorMessage>{errors.songKey?.message}</ErrorMessage>
         <Controller
           name="text"
           control={control}
