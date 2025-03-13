@@ -1,8 +1,8 @@
-import React from "react";
 import { prisma } from "@/prisma/client";
 import { notFound } from "next/navigation";
-import { Button, Flex, Heading, Text } from "@radix-ui/themes";
+import { Button, Card, Flex, Heading, Text } from "@radix-ui/themes";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 const SongDetailPage = async ({
   params,
@@ -26,7 +26,9 @@ const SongDetailPage = async ({
           <Heading>{`${song.title.toUpperCase()}`}</Heading>
           <Heading>{`(${song.songKey})`}</Heading>
         </Flex>
-        <Text>{`${song.text}`}</Text>
+        <div className="prose">
+          <ReactMarkdown>{`${song.text}`}</ReactMarkdown>
+        </div>
       </div>
     </>
   );
