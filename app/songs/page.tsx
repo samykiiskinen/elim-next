@@ -21,10 +21,10 @@ const SongsPage = async () => {
         <Table.Root variant="surface">
           <Table.Header>
             <Table.Row className="text-lg">
-              <Table.ColumnHeaderCell className="w-1/2">
+              <Table.ColumnHeaderCell className="w-12/16">
                 SÅNGTITEL
               </Table.ColumnHeaderCell>
-              <Table.ColumnHeaderCell className="w-1/4">
+              <Table.ColumnHeaderCell className="w-4/16 text-center">
                 TONART
               </Table.ColumnHeaderCell>
               <Table.ColumnHeaderCell className="w-1/16"></Table.ColumnHeaderCell>
@@ -41,8 +41,8 @@ const SongsPage = async () => {
                     {song.title.toLocaleUpperCase()}
                   </div>
                 </Table.Cell>
-                <Table.Cell>
-                  <div className="flex items-center h-full text-md">
+                <Table.Cell className="text-center">
+                  <div className="flex items-center justify-center h-full text-md">
                     {song.songKey.toLocaleUpperCase()}
                   </div>
                 </Table.Cell>
