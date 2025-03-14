@@ -17,7 +17,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="mb-5 m-2 p-2 py-2">
+    <nav className="m-2 p-2">
       <Container>
         <Flex justify="between" align="center">
           <Flex align="center" gap="3">
@@ -31,7 +31,7 @@ const NavBar = () => {
                 priority
               ></Image>
             </Link>
-            <ul className="flex gap-4 text-md font-bold">
+            <ul className="flex gap-2 text-md font-bold">
               {links.map((link) => (
                 <li key={link.href}>
                   <Link
