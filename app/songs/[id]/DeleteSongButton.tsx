@@ -25,7 +25,7 @@ const DeleteSongButton = ({ id }: { id: number }) => {
         <AlertDialog.Root>
           <AlertDialog.Trigger>
             <Button color="tomato" variant="soft">
-              <RiDeleteBin2Line size={20} />
+              <RiDeleteBin2Line size={15} />
             </Button>
           </AlertDialog.Trigger>
           <AlertDialog.Content>

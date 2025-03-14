@@ -6,7 +6,7 @@ const EditAidProjectButton = ({ aidProjectId }: { aidProjectId: number }) => {
   return (
     <Link href={`/aid-projects/${aidProjectId}/edit`}>
       <Button color="gray" variant="surface">
-        <GoPencil size={20} />
+        <GoPencil size={15} />
       </Button>
     </Link>
   );

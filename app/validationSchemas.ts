@@ -7,6 +7,7 @@ export const songSchema = z.object({
 });
 
 export const userSchema = z.object({
+    email: z.string(),
     firstName: z.string(),
     lastName: z.string(),
     password: z.string(),

@@ -7,7 +7,7 @@ const EditSongButton = ({ songId }: { songId: number }) => {
   return (
     <Link href={`/songs/${songId}/edit`}>
       <Button color="gray" variant="surface">
-        <GoPencil size={20} />
+        <GoPencil size={15} />
       </Button>
     </Link>
   );

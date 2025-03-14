@@ -18,7 +18,7 @@ const AidProjectsPage = async () => {
             <div>
               <Link href="aid-projects/new">
                 <Button color="jade" variant="soft">
-                  <RiAddFill size={20} />
+                  <RiAddFill size={15} />
                 </Button>
               </Link>
             </div>
@@ -77,7 +77,7 @@ const AidProjectsPage = async () => {
                       <Table.Cell>
                         <Link href={`/aid-projects/${aidProject.id}`}>
                           <Button color="gray" variant="surface">
-                            <RiPagesLine size={20} />
+                            <RiPagesLine size={15} />
                           </Button>
                         </Link>
                       </Table.Cell>

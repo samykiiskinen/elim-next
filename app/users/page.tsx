@@ -1,5 +1,5 @@
 import { prisma } from "@/prisma/client";
-import { Button, Container, Table } from "@radix-ui/themes";
+import { Button, Container, Heading, Table } from "@radix-ui/themes";
 import Link from "next/link";
 import { RiAddFill, RiPagesLine } from "react-icons/ri";
 import DeleteUserButton from "./_components/DeleteUserButton";
@@ -10,11 +10,13 @@ const UsersPage = async () => {
     <Container>
       <div>
         <div className="flex items-center mb-5 space-x-5">
-          <h1 className="text-3xl font-bold">ANVÄNDARE</h1>
+          <div>
+            <Heading>ANVÄNDARE</Heading>
+          </div>
           <div>
             <Link href="users/new">
               <Button color="jade" variant="soft">
-                <RiAddFill size={20} />
+                <RiAddFill size={15} />
               </Button>
             </Link>
           </div>

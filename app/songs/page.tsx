@@ -20,7 +20,7 @@ const SongsPage = async () => {
       <div className="max-w-2xl mt-4">
         <Table.Root variant="surface">
           <Table.Header>
-            <Table.Row className="text-lg">
+            <Table.Row className="text-md">
               <Table.ColumnHeaderCell className="w-12/16">
                 SÅNGTITEL
               </Table.ColumnHeaderCell>
@@ -48,13 +48,13 @@ const SongsPage = async () => {
                 </Table.Cell>
                 <Table.Cell>
                   <Button color="jade" variant="soft">
-                    <RiAddFill size={20} />
+                    <RiAddFill size={15} />
                   </Button>
                 </Table.Cell>
                 <Table.Cell>
                   <Link href={`/songs/${song.id}`}>
                     <Button color="gray" variant="surface">
-                      <RiPagesLine size={20} />
+                      <RiPagesLine size={15} />
                     </Button>
                   </Link>
                 </Table.Cell>
