@@ -79,3 +79,29 @@ model VerificationToken {
   @@unique([identifier, token])
   @@map("verification_tokens")
 }
+
+model AidProject {
+  id            Int     @id @default(autoincrement())
+  date          String
+  accountNumber Int
+  accountName   String  @db.VarChar(64)
+  country       String  @db.VarChar(64)
+  receiver      String  @db.VarChar(128)
+  purpose       String  @db.VarChar(512)
+  decision      String? @db.VarChar(64)
+  income        Int?
+  expense       Int?
+  files         File[]
+
+  @@map("aid_projects")
+}
+
+model File {
+  id           Int        @id @default(autoincrement())
+  aidProject   AidProject @relation(fields: [aidProjectId], references: [id])
+  aidProjectId Int
+  filePath     String     @db.VarChar(512)
+  createdAt    DateTime   @default(now())
+
+  @@map("files")
+}

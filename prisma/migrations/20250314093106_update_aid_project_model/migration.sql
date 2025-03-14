@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "aid_projects" ALTER COLUMN "decision" DROP NOT NULL,
+ALTER COLUMN "income" DROP NOT NULL,
+ALTER COLUMN "expense" DROP NOT NULL;

@@ -1,11 +1,11 @@
-import { Heading } from "@radix-ui/themes";
+import { Container, Heading } from "@radix-ui/themes";
 
 export default async function Home() {
   return (
     <>
-      <div>
+      <Container>
         <Heading>PINGSTKYRKAN ELIM I TRELLEBORG</Heading>
-      </div>
+      </Container>
     </>
   );
 }

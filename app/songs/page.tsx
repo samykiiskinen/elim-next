@@ -1,4 +1,4 @@
-import { Button, Heading, Table } from "@radix-ui/themes";
+import { Button, Container, Heading, Table } from "@radix-ui/themes";
 import Link from "next/link";
 import React from "react";
 import { prisma } from "@/prisma/client";
@@ -10,7 +10,7 @@ const SongsPage = async () => {
   const songs = await prisma.song.findMany();
 
   return (
-    <>
+    <Container>
       <div className="mb-5">
         <Heading>SÅNGER</Heading>
       </div>
@@ -69,7 +69,7 @@ const SongsPage = async () => {
           </Table.Body>
         </Table.Root>
       </div>
-    </>
+    </Container>
   );
 };
 

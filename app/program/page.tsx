@@ -1,8 +1,14 @@
-import { Heading } from "@radix-ui/themes";
+import { Container, Heading } from "@radix-ui/themes";
 import React from "react";
 
 const ProgramPage = () => {
-  return <Heading>PROGRAM</Heading>;
+  return (
+    <>
+      <Container>
+        <Heading>PROGRAM</Heading>
+      </Container>
+    </>
+  );
 };
 
 export default ProgramPage;
