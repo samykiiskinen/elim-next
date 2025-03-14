@@ -20,7 +20,7 @@ import { AidProject } from "@prisma/client";
 
 type aidProjectFormData = z.infer<typeof aidProjectSchema>;
 
-const AidProjectForm = ({ aidProject }: { aidProject: AidProject }) => {
+const AidProjectForm = ({ aidProject }: { aidProject?: AidProject | null }) => {
   const router = useRouter();
   const {
     register,

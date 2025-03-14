@@ -13,6 +13,7 @@ const NavBar = () => {
     { label: "OM OSS", href: "/about" },
     { label: "BISTÅND", href: "/aid-projects" },
     { label: "SÅNGER", href: "/songs" },
+    { label: "ANVÄNDARE", href: "/users" },
   ];
 
   return (
