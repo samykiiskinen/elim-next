@@ -52,7 +52,7 @@ const NavBar = () => {
             {status === "authenticated" && (
               <DropdownMenu.Root>
                 <DropdownMenu.Trigger>
-                  <Text>{session.user!.name}</Text>
+                  <Text>{session.user?.name}</Text>
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>
                   <DropdownMenu.Label>

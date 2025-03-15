@@ -23,8 +23,7 @@ const UserDetailPage = async ({
         </Link>
       </div>
       <div>
-        <p>{`Namn: ${user.firstName} ${user.lastName}`}</p>
-        <p>{`Role: ${user.role}`}</p>
+        <p>{`Namn: ${user.name}`}</p>
         <p>{`E-post: ${user.email}`}</p>
         <p>{`Roll: ${user.role}`}</p>
       </div>

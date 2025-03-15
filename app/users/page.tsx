@@ -42,7 +42,7 @@ const UsersPage = async () => {
               {users.map((user) => (
                 <Table.Row key={user.id}>
                   <Table.Cell>
-                    <div className="flex items-center h-full text-md">{`${user.firstName} ${user.lastName}`}</div>
+                    <div className="flex items-center h-full text-md">{`${user.name}`}</div>
                   </Table.Cell>
                   <Table.Cell>
                     <div className="flex items-center h-full text-md">

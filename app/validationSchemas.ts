@@ -8,8 +8,7 @@ export const songSchema = z.object({
 
 export const userSchema = z.object({
     email: z.string(),
-    firstName: z.string(),
-    lastName: z.string(),
+    name: z.string(),
     password: z.string(),
     role: z.enum(["ADMIN", "FINANCE", "LEADERSHIP", "SUPPORT", "WORSHIP", "YOUTH"])
 });

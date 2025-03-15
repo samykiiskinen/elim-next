@@ -20,12 +20,11 @@ export async function POST(request: NextRequest){
     const hashedPassword = await argon2.hash(body.password)
     const newUser = await prisma.user.create({
         data: {
-            firstName: body.firstName,
-            lastName: body.lastName,
+            name: body.name,
             email: body.email,
             role: body.role,
             hashedPassword
         }
     })
-    return NextResponse.json({ email: newUser.email})
+    return NextResponse.json({ name: newUser.name })
 }

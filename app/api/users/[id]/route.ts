@@ -21,8 +21,7 @@ export async function PATCH(
             where: { id: user.id },
             data: {
                 email: body.email,
-                firstName: body.firstName,
-                lastName: body.lastName,
+                name: body.name,
                 role: body.role
             }
         })

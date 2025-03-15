@@ -19,6 +19,18 @@ model Song {
   @@map("songs")
 }
 
+model User {
+  id             String    @id @default(cuid())
+  name           String
+  email          String    @unique
+  hashedPassword String
+  role           UserRole
+  accounts       Account[]
+  sessions       Session[]
+
+  @@map("users")
+}
+
 model Account {
   id                String  @id @default(cuid())
   userId            String  @map("user_id")
@@ -47,19 +59,6 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("sessions")
-}
-
-model User {
-  id             String    @id @default(cuid())
-  firstName      String
-  lastName       String?
-  email          String    @unique
-  hashedPassword String
-  role           UserRole
-  accounts       Account[]
-  sessions       Session[]
-
-  @@map("users")
 }
 
 enum UserRole {

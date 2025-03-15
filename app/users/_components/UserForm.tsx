@@ -72,17 +72,11 @@ const UserForm = ({ user }: { user?: User }) => {
               {...register("email")}
             ></TextField.Root>
             <TextField.Root
-              defaultValue={user?.firstName}
-              placeholder="Förnamn"
-              {...register("firstName")}
+              defaultValue={user?.name}
+              placeholder="Namn"
+              {...register("name")}
             ></TextField.Root>
-            <ErrorMessage>{errors.firstName?.message}</ErrorMessage>
-            <TextField.Root
-              defaultValue={user?.lastName || ""}
-              placeholder="Efternamn"
-              {...register("lastName")}
-            ></TextField.Root>
-            <ErrorMessage>{errors.lastName?.message}</ErrorMessage>
+            <ErrorMessage>{errors.name?.message}</ErrorMessage>
             <TextField.Root
               defaultValue={user?.hashedPassword}
               placeholder="Lösenord"
@@ -100,7 +94,7 @@ const UserForm = ({ user }: { user?: User }) => {
                     setValue("role", "ADMIN");
                   }}
                 >
-                  Admin
+                  ADMIN
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onClick={() => {
@@ -108,7 +102,7 @@ const UserForm = ({ user }: { user?: User }) => {
                     setValue("role", "FINANCE");
                   }}
                 >
-                  Ekonomi
+                  FINANCE
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onClick={() => {
@@ -116,7 +110,7 @@ const UserForm = ({ user }: { user?: User }) => {
                     setValue("role", "LEADERSHIP");
                   }}
                 >
-                  Ledning
+                  LEADERSHIP
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onClick={() => {
@@ -124,7 +118,7 @@ const UserForm = ({ user }: { user?: User }) => {
                     setValue("role", "WORSHIP");
                   }}
                 >
-                  Lovsång
+                  WORSHIP
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onClick={() => {
@@ -132,7 +126,7 @@ const UserForm = ({ user }: { user?: User }) => {
                     setValue("role", "SUPPORT");
                   }}
                 >
-                  Support
+                  SUPPORT
                 </DropdownMenu.Item>
                 <DropdownMenu.Item
                   onClick={() => {
@@ -140,7 +134,7 @@ const UserForm = ({ user }: { user?: User }) => {
                     setValue("role", "YOUTH");
                   }}
                 >
-                  Ungdom
+                  YOUTH
                 </DropdownMenu.Item>
               </DropdownMenu.Content>
             </DropdownMenu.Root>
