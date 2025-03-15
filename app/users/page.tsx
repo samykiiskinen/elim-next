@@ -25,17 +25,35 @@ const UsersPage = async () => {
           <Table.Root variant="surface">
             <Table.Header>
               <Table.Row>
-                <Table.ColumnHeaderCell>ANVÄNDARE</Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell>ROLL</Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
-                <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell className="w-5/16">
+                  ANVÄNDARE
+                </Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell className="w-6/16">
+                  E-POST
+                </Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell className="w-3/16">
+                  ROLL
+                </Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell className="w-1/16"></Table.ColumnHeaderCell>
+                <Table.ColumnHeaderCell className="w-1/16"></Table.ColumnHeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
               {users.map((user) => (
                 <Table.Row key={user.id}>
-                  <Table.Cell>{`${user.firstName} ${user.lastName}`}</Table.Cell>
-                  <Table.Cell>{user.role}</Table.Cell>
+                  <Table.Cell>
+                    <div className="flex items-center h-full text-md">{`${user.firstName} ${user.lastName}`}</div>
+                  </Table.Cell>
+                  <Table.Cell>
+                    <div className="flex items-center h-full text-md">
+                      {user.email}
+                    </div>
+                  </Table.Cell>
+                  <Table.Cell>
+                    <div className="flex items-center h-full text-md">
+                      {user.role}
+                    </div>
+                  </Table.Cell>
                   <Table.Cell>
                     <Link href={`/users/${user.id}`}>
                       <Button color="gray" variant="surface">

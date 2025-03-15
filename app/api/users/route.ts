@@ -1,16 +1,13 @@
 import { prisma } from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-import { z } from 'zod'
 import argon2 from 'argon2'
-
-const schema = z.object({
-    name: z.string(),
-    password: z.string().min(5)
-})
+import { userSchema } from "@/app/validationSchemas";
 
 export async function POST(request: NextRequest){
     const body = await request.json()
-    const validation = schema.safeParse(body)
+    const validation = userSchema.safeParse(body)
+    console.log("Validation Errors:", validation.error?.errors)
+
     if (!validation.success)
         return NextResponse.json(validation.error.errors, { status: 400 })
     const user = await prisma.user.findUnique({
